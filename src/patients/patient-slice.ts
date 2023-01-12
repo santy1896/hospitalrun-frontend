@@ -114,6 +114,8 @@ export const createPatient = (
   const cleanPatient = cleanupPatient(patient)
   const newPatientError = validatePatient(cleanPatient)
 
+  console.log("inpatient")
+
   if (!newPatientError) {
     const newPatient = await PatientRepository.save(cleanPatient)
     dispatch(createPatientSuccess())

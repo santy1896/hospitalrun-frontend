@@ -112,7 +112,7 @@ const NewImagingRequest = () => {
       await mutate(newImagingRequest)
       history.push(`/imaging`)
     } catch (e) {
-      setError(e)
+      // setError(e)
     }
   }
 

@@ -9,7 +9,7 @@ import useTranslator from '../../shared/hooks/useTranslator'
 import Patient from '../../shared/model/Patient'
 import { RootState } from '../../shared/store'
 import GeneralInformation from '../GeneralInformation'
-import { createPatient } from '../patient-slice'
+import { createPatient, createPatientError } from '../patient-slice'
 import { isPossibleDuplicatePatient } from '../util/is-possible-duplicate-patient'
 import DuplicateNewPatientModal from './DuplicateNewPatientModal'
 
@@ -56,6 +56,16 @@ const NewPatient = () => {
   }
 
   const onSave = () => {
+    if(!patient.sex){
+      console.info("pls set sex")
+      Toast(
+        'error',
+        t('states.error'),
+        `Please enter patient sex`,
+      )
+      return
+      // dispatch(createPatientError(patient))
+    }
     let duplicatePatients = []
     if (patients !== undefined) {
       duplicatePatients = patients.filter((existingPatient: any) =>

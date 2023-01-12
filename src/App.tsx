@@ -47,7 +47,8 @@ const App: React.FC = () => {
   }
 
   return (
-    <>
+  <>
+  <React.Fragment>
       <BrowserRouter>
         <Suspense fallback={<Spinner color="blue" loading size={[10, 25]} type="ScaleLoader" />}>
           <Switch>
@@ -58,6 +59,7 @@ const App: React.FC = () => {
         </Suspense>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
+      </React.Fragment>
     </>
   )
 }
