@@ -44,7 +44,8 @@
     "validator": "^13.0.0"
   },
   "resolutions": {
-    "moment": "2.24.0"
+    "moment": "2.24.0",
+    "react-error-overlay":"6.0.9"
   },
   "comments": {
     "resolutions": "Added this key as temp fix https://github.com/moment/moment/issues/5484"
