@@ -56,16 +56,17 @@ const NewPatient = () => {
   }
 
   const onSave = () => {
-    if(!patient.sex){
-      console.info("pls set sex")
-      Toast(
-        'error',
-        t('states.error'),
-        `Please enter patient sex`,
-      )
-      return
-      // dispatch(createPatientError(patient))
-    }
+    patient.sex = 'Unknown'
+    // if(!patient.sex){
+    //   console.info("pls set sex")
+    //   Toast(
+    //     'error',
+    //     t('states.error'),
+    //     `Please enter patient sex`,
+    //   )
+    //   return
+    //   // dispatch(createPatientError(patient))
+    // }
     let duplicatePatients = []
     if (patients !== undefined) {
       duplicatePatients = patients.filter((existingPatient: any) =>
