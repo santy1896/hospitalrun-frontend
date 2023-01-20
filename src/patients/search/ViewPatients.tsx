@@ -1,7 +1,8 @@
 import { Button } from '@hospitalrun/components'
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router'
+import { useHistory } from 'react-router-dom'
+// import {useNavigate} from 'react-router-dom'
 
 import useAddBreadcrumbs from '../../page-header/breadcrumbs/useAddBreadcrumbs'
 import { useButtonToolbarSetter } from '../../page-header/button-toolbar/ButtonBarProvider'
@@ -15,6 +16,7 @@ const ViewPatients = () => {
   const { t } = useTranslator()
   const history = useHistory()
   const updateTitle = useUpdateTitle()
+  // const navigate = useNavigate()
   useEffect(() => {
     updateTitle(t('patients.label'))
   })
@@ -40,7 +42,9 @@ const ViewPatients = () => {
     }
   }, [dispatch, setButtonToolBar, t, history])
 
-  return <SearchPatients />
+  return <>
+  <SearchPatients />
+  </>
 }
 
 export default ViewPatients
