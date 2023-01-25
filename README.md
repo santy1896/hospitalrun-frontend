@@ -1,4 +1,4 @@
-## HospitalRun Frontend
+### HospitalRun Frontend
 
 1. Check out the HospitalRun General Contributing Guide for how to:
 1. Browse Issues
@@ -19,7 +19,7 @@ Cleanup To delete the development database, go to the root of the project and r
 Install dependencies & start the application
 1. Install dependencies: npm install
 2. Configure REACT_APP_HOSPITALRUN_API=http://localhost:5984 environment variable in .env
-3. Run the application npm start
+3. Run the applicatiochagesn npm start
 
 3. Start the application
 npm install
