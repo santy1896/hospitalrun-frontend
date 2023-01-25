@@ -1,4 +1,4 @@
-# HospitalRun Frontend
+## HospitalRun Frontend
 
 1. Check out the HospitalRun General Contributing Guide for how to:
 1. Browse Issues
