@@ -65,5 +65,4 @@ const HospitalRun = () => {
     </div>
   )
 }
-
 export default HospitalRun
