@@ -21,10 +21,19 @@ pipeline {
                 sh "npm test"
          }
         }
-        stage('deploy') {
+        stages {
+        stage('Install Nginx') {
             steps {
-                sh "npm run deploy"
+                sh 'sudo apt-get update -y'
+                sh 'sudo apt-get install -y nginx'
             }
+        }
+        
+        stage('Verify Nginx installation') {
+            steps {
+                sh 'nginx -v'
+            }
+        }
         }
     }
  }
