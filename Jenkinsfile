@@ -21,19 +21,6 @@ pipeline {
                 sh "npm test"
          }
         }
-        stage('Install Nginx') {
-            steps {
-                sh 'sudo apt-get update -y'
-                sh 'sudo apt-get install -y nginx'
-            }
-        }
-        
-        stage('Verify Nginx installation') {
-            steps {
-                sh 'nginx -v'
-            }
-        
-        }
     }
  }
 
