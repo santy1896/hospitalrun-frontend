@@ -21,7 +21,6 @@ pipeline {
                 sh "npm test"
          }
         }
-        stages {
         stage('Install Nginx') {
             steps {
                 sh 'sudo apt-get update -y'
@@ -33,7 +32,7 @@ pipeline {
             steps {
                 sh 'nginx -v'
             }
-        }
+        
         }
     }
  }
