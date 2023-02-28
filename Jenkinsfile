@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Building Node JS') {
             steps {
-                nodejs(nodeJSInstallationName: 'NodeJS') {
+                nodejs(nodeJSInstallationName: 'NodeJS 10.19.0') {
                 sh "npm install" 
                 }
             }
