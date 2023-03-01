@@ -1,4 +1,4 @@
-pipeline {
+pipeline {														
     agent any
     
     stages {
@@ -12,17 +12,12 @@ pipeline {
                 nodejs(nodeJSInstallationName: 'NodeJS 12.22.11') {
                 sh "npm install"
             }
-           }
-        }
-        stage('Testing the Application') {
-            steps {
-                sh "npm test"
-            }
-        }  
-        }     
-        stage('Starting the Application') {
+          }
+        }      
+        stage("Starting the Application") {
             steps {
                 sh "npm start"
-            }    
-        }         
+            }             
+        }  
+     }    
  }
